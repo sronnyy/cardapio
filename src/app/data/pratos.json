@@ -1,0 +1,22 @@
+[
+  { "id": 1, "nome": "Risoto de Cogumelos", "preco": 58.9, "desc": "Arborio, funghi, parmesão" },
+  { "id": 2, "nome": "Filé ao Molho Malbec", "preco": 74.9, "desc": "Purê de batatas" },
+  { "id": 3, "nome": "Salmão Grelhado", "preco": 69.9, "desc": "Legumes salteados" },
+  { "id": 4, "nome": "Gnocchi ao Sugo", "preco": 44.9, "desc": "Manjericão fresco" },
+  { "id": 5, "nome": "Parmegiana de Frango", "preco": 52.9, "desc": "Arroz e fritas" },
+  { "id": 6, "nome": "Lasanha Bolonhesa", "preco": 49.9, "desc": "Massa fresca" },
+  { "id": 7, "nome": "Cordeiro Assado", "preco": 89.9, "desc": "Cuscuz marroquino" },
+  { "id": 8, "nome": "Polvo à Lagareiro", "preco": 96.9, "desc": "Batatas ao murro" },
+  { "id": 9, "nome": "Picanha na Brasa", "preco": 79.9, "desc": "Arroz, farofa e vinagrete" },
+  { "id": 10, "nome": "Fettuccine Alfredo", "preco": 45.9, "desc": "Creme e parmesão" },
+  { "id": 11, "nome": "Moqueca de Peixe", "preco": 72.9, "desc": "Camarão opcional" },
+  { "id": 12, "nome": "Bobó de Camarão", "preco": 74.9, "desc": "Purê de mandioca" },
+  { "id": 13, "nome": "Stroganoff de Carne", "preco": 48.9, "desc": "Arroz e batata palha" },
+  { "id": 14, "nome": "Ravioli de Ricota", "preco": 47.9, "desc": "Manteiga e sálvia" },
+  { "id": 15, "nome": "Peito de Pato", "preco": 83.9, "desc": "Laranja e especiarias" },
+  { "id": 16, "nome": "Paella", "preco": 94.9, "desc": "Frutos do mar" },
+  { "id": 17, "nome": "Tagliata de Contra-filé", "preco": 68.9, "desc": "Rúcula e grana padano" },
+  { "id": 18, "nome": "Frango Grelhado", "preco": 42.9, "desc": "Arroz integral e salada" },
+  { "id": 19, "nome": "Penne ao Pesto", "preco": 43.9, "desc": "Nozes e parmesão" },
+  { "id": 20, "nome": "Tilápia Crocante", "preco": 54.9, "desc": "Molho de limão siciliano" }
+]

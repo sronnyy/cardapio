@@ -1,0 +1,22 @@
+[
+  { "id": 1, "nome": "Bruschetta", "preco": 24.9, "desc": "Tomate, manjericão e azeite" },
+  { "id": 2, "nome": "Carpaccio de Carne", "preco": 34.9, "desc": "Lâminas de filé mignon com molho de mostarda" },
+  { "id": 3, "nome": "Cesta de Pães Artesanais", "preco": 18.9, "desc": "Acompanhada de manteiga de ervas" },
+  { "id": 4, "nome": "Queijo Brie Empanado", "preco": 29.9, "desc": "Com geleia de damasco" },
+  { "id": 5, "nome": "Salada Caprese", "preco": 27.9, "desc": "Mussarela de búfala, tomate e pesto" },
+  { "id": 6, "nome": "Mini Quiches Sortidas", "preco": 21.9, "desc": "Espinafre, queijo e bacon" },
+  { "id": 7, "nome": "Bolinho de Bacalhau", "preco": 26.9, "desc": "Clássico português crocante" },
+  { "id": 8, "nome": "Anéis de Lula à Dorê", "preco": 32.9, "desc": "Servidos com molho tártaro" },
+  { "id": 9, "nome": "Ceviche de Salmão", "preco": 31.9, "desc": "Marinado no limão e ervas frescas" },
+  { "id": 10, "nome": "Tartar de Atum", "preco": 35.9, "desc": "Com chips de batata doce" },
+  { "id": 11, "nome": "Croquete de Costela", "preco": 23.9, "desc": "Servido com molho barbecue" },
+  { "id": 12, "nome": "Empanadas Argentinas", "preco": 22.9, "desc": "Recheio de carne temperada" },
+  { "id": 13, "nome": "Pastéis de Camarão", "preco": 28.9, "desc": "Com catupiry cremoso" },
+  { "id": 14, "nome": "Rolinho Primavera", "preco": 19.9, "desc": "Vegetais crocantes e molho agridoce" },
+  { "id": 15, "nome": "Chicken Wings", "preco": 25.9, "desc": "Asas de frango ao molho picante" },
+  { "id": 16, "nome": "Batata Rústica", "preco": 17.9, "desc": "Com alecrim e sal grosso" },
+  { "id": 17, "nome": "Provoleta", "preco": 27.9, "desc": "Queijo provolone grelhado" },
+  { "id": 18, "nome": "Guacamole com Nachos", "preco": 24.9, "desc": "Avocado temperado" },
+  { "id": 19, "nome": "Dadinho de Tapioca", "preco": 21.9, "desc": "Com melaço de cana" },
+  { "id": 20, "nome": "Polenta Frita", "preco": 20.9, "desc": "Servida com parmesão ralado" }
+]

@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
+/* Cores básicas do tema */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a; */
     --foreground: #ededed;
   }
 }
 
+/* NÃO defina font-family aqui para o body.
+   Deixe a camada base cuidar das fontes. */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Tailwind v4: mapeie fontes nas camadas corretas */
+@layer base {
+  /* Agora as variáveis vêm do next/font (layout.jsx).
+     Aplique-as aqui. */
+  body {
+    font-family: var(--font-inter);
+  }
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: var(--font-playfair);
+  }
+}
+
+/* Opcional: alinhe o tema do Tailwind v4 com suas variáveis */
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+/* utilitários extra (se quiser manter) */
+@layer utilities {
+  .text-shadow { text-shadow: 0 1px 2px rgba(0,0,0,.05); }
+  .gradient-border { position: relative; }
+  .gradient-border::after {
+    content: "";
+    position: absolute; bottom: -2px; left: 0; width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,.1), transparent);
+  }
+}
+
+/* Scrollbarzinha educada */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,.02); }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,.2); }

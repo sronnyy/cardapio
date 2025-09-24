@@ -1,8 +1,8 @@
 import "./globals.css";
 import TabsNav from "@/components/TabsNav";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import Script from "next/script"; // importa Script do Next
 
-// Configuração de fontes premium
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -15,30 +15,54 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+const cormorant = Cormorant_Garamond({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-cormorant",
+});
+
 export const metadata = {
-  title: "Cardápio | Restaurante X",
-  description: "Experiência culinária sofisticada com ingredientes selecionados.",
+  title: "Cardápio | Restaurante Videira",
+  description:
+    "Experiência culinária sofisticada com ingredientes selecionados.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" >
-      <body className="min-h-dvh bg-neutral-50 text-neutral-800 antialiased">
-        {/* HEADER FIXO com design premium */}
-        <header className="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-neutral-200/70">
-          <div className="mx-auto max-w-6xl px-6 h-20 flex items-center justify-between">
+    <html lang="pt-BR">
+      <body
+        className="min-h-dvh text-neutral-800 antialiased"
+        style={{
+          backgroundImage: "url('/bg.png')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundColor: "#f9fafb", // fallback suave
+        }}
+      >
+        {/* HEADER FIXO */}
+        <header className="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-neutral-200/70">
+          <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
             <a href="/" className="group flex items-center gap-3">
-              <div className="relative h-10 w-10 rounded-lg bg-gradient-to-br from-neutral-900 to-neutral-800 flex items-center justify-center shadow-md">
-                <span className="text-gold-light font-medium text-lg font-serif tracking-wider">R</span>
-                <div className="absolute inset-0 border border-gold/30 rounded-lg"></div>
+              <div className="relative h-10 w-10 rounded-lg bg-gradient-to-br from-[#719e59] to-[#88b86e] flex items-center justify-center shadow-md">
+                <span className="text-gray-100 font-medium text-lg font-serif tracking-wider">
+                  V
+                </span>
+                <div className="absolute inset-0 border border-[#628a4c]/30 rounded-lg"></div>
               </div>
-              <span className="text-lg font-serif font-semibold tracking-wide text-neutral-800 group-hover:opacity-80 transition">
-                Restaurante X
+              <span className="text-lg font-cormorant font-semibold tracking-wide text-neutral-800 group-hover:opacity-80 transition">
+                Restaurante Videira
               </span>
             </a>
+
+            {/* BOTÃO PREMIUM */}
             <a
               href="/entradas"
-              className="inline-flex items-center gap-2 rounded-full bg-neutral-900 text-gold-light px-5 py-2.5 text-sm font-medium hover:bg-neutral-800 focus:outline-none transition-all duration-300 shadow-md hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-full 
+              bg-[#628a4c] text-white px-5 py-2.5 text-sm font-medium 
+              hover:bg-[#52753e] focus:outline-none transition-all duration-300 
+              shadow-md hover:shadow-lg"
             >
               <span>Ver Cardápio</span>
               <svg
@@ -57,24 +81,21 @@ export default function RootLayout({ children }) {
           </div>
         </header>
 
-        {/* compensação do header */}
+        {/* compensação header */}
         <div className="h-20" />
 
-        {/* TABS FIXAS com design premium */}
+        {/* TABS */}
         <TabsNav />
 
-        {/* CONTEÚDO TROCÁVEL POR ROTA */}
-        <main className="mx-auto max-w-6xl px-6 py-10">{children}</main>
+        {/* CONTEÚDO */}
+        <main className="mx-auto max-w-7xl px-6 py-10">{children}</main>
 
-        {/* compensação do footer */}
-        <div className="h-24" />
-
-        {/* FOOTER FIXO premium */}
-        {/* <footer className="fixed inset-x-0 bottom-0 z-50 bg-white/90 backdrop-blur-xl border-t border-neutral-200/70">
-          <div className="mx-auto max-w-6xl px-6 h-24 flex items-center justify-between">
+        {/* FOOTER FIXO */}
+        <footer className="fixed inset-x-0 bottom-0 z-50 bg-white/95 backdrop-blur-xl border-t border-neutral-200/70">
+          <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
             <div className="flex flex-col">
               <p className="text-sm text-neutral-700 leading-none font-medium">
-                © {new Date().getFullYear()} Restaurante X
+                © {new Date().getFullYear()} Restaurante Videira
               </p>
               <p className="text-xs text-neutral-500 mt-1.5">
                 Todos os direitos reservados
@@ -83,14 +104,17 @@ export default function RootLayout({ children }) {
 
             <div className="flex flex-col items-end">
               <p className="text-sm text-neutral-700 leading-none font-medium">
-                Atendimento: <span className="text-gold">18h–23h</span>
+                Atendimento: <span className="text-[#628a4c]">18h–23h</span>
               </p>
               <p className="text-xs text-neutral-500 mt-1.5">
-                Reservas: <span className="text-gold">(11) 9999-9999</span>
+                Reservas: <span className="text-[#628a4c]">(11) 9999-9999</span>
               </p>
             </div>
           </div>
-        </footer> */}
+        </footer>
+
+        {/* importa o script awesome.js */}
+        <Script src="/js/awesome.js" strategy="afterInteractive" />
       </body>
     </html>
   );

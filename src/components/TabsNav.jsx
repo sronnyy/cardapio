@@ -3,79 +3,145 @@
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { motion } from "framer-motion";
+import { FaLeaf, FaUtensils, FaIceCream, FaGlassMartini } from "react-icons/fa";
 
 const tabs = [
-  { prefetch: true, href: "/entradas",   label: "Entradas",           seg: "entradas" },
-  { prefetch: true, href: "/pratos",     label: "Principal",  seg: "pratos" },
-  { prefetch: true, href: "/sobremesas", label: "Sobremesas",         seg: "sobremesas" },
-  { prefetch: true, href: "/bebidas",    label: "Bebidas",            seg: "bebidas" },
+  { href: "/entradas",   label: "Entradas",   seg: "entradas",   icon: FaLeaf,         prefetch: true },
+  { href: "/pratos",     label: "Principal",  seg: "pratos",     icon: FaUtensils,     prefetch: true },
+  { href: "/sobremesas", label: "Sobremesas", seg: "sobremesas", icon: FaIceCream,     prefetch: true },
+  { href: "/bebidas",    label: "Bebidas",    seg: "bebidas",    icon: FaGlassMartini, prefetch: true },
 ];
- 
+
+const palette = {
+  primary: "#628a4c",
+  primaryLight: "#8db573",
+  primaryDark: "#4a6a3a",
+};
+
 export default function TabsNav() {
   const seg = useSelectedLayoutSegment();
+  const isActive = (s) => seg === s || (seg === null && s === "entradas");
 
   return (
-    <nav className="sticky top-20 z-40 bg-white/95 backdrop-blur-2xl border-b border-neutral-100 shadow-sm">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex gap-1 overflow-x-auto py-3">
-          {tabs.map((t, index) => {
-            const active = seg === t.seg || (seg === null && t.seg === "entradas");
-            return (
-              <Link
-                key={t.href}
-                href={t.href}
-                prefetch={false}
-                className="relative group px-1"
-              >
-                <motion.div
-                  className={`relative px-6 py-3 rounded-xl transition-all duration-300 ${
-                    active
-                      ? "bg-gradient-to-r from-amber-50 to-orange-50 shadow-sm"
-                      : "hover:bg-neutral-50"
-                  }`}
-                  whileHover={{ y: -2 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                >
-                  <span
-                    className={`relative text-sm font-medium tracking-wide z-10 ${
-                      active
-                        ? "text-amber-700 font-semibold"
-                        : "text-neutral-600 group-hover:text-neutral-800"
-                    }`}
+    <>
+      {/* Visível em todas as telas; sticky abaixo do header */}
+      <nav
+        className="sticky top-20 z-40 bg-white/98 backdrop-blur-3xl border-b border-neutral-100 shadow-sm"
+        role="tablist"
+        aria-label="Navegação do cardápio"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* faixa rolável no mobile; centraliza no desktop */}
+          <div className="relative">
+            {/* fades laterais para sugerir rolagem */}
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-6 bg-gradient-to-r from-white to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-white to-transparent" />
+
+            <div
+              className="flex gap-3 md:gap-4 py-3 md:py-4 pl-1 pr-1 md:px-0 overflow-x-auto no-scrollbar snap-x snap-mandatory md:justify-center"
+              style={{
+                WebkitOverflowScrolling: "touch",
+                scrollPaddingInline: "1rem",
+              }}
+            >
+              {tabs.map((t) => {
+                const active = isActive(t.seg);
+                const Icon = t.icon;
+
+                return (
+                  <Link
+                    key={t.href}
+                    href={t.href}
+                    prefetch={t.prefetch}
+                    className="relative group snap-start"
+                    role="tab"
+                    aria-selected={active}
+                    aria-current={active ? "page" : undefined}
                   >
-                    {t.label}
-                  </span>
-                  
-                  {active && (
-                    <>
-                      <motion.div
-                        className="absolute inset-0 rounded-xl border border-amber-200/60"
-                        layoutId="activeTabBorder"
-                        transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                      />
-                      <motion.div
-                        className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-amber-500 rotate-45"
-                        layoutId="activeTabMarker"
-                        transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                      />
-                    </>
-                  )}
-                </motion.div>
-                
-                {/* Efeito sutil de brilho para aba ativa */}
-                {active && (
-                  <motion.div 
-                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-amber-100/20 to-orange-100/20"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                  />
-                )}
-              </Link>
-            );
-          })}
+                    <motion.div
+                      className={[
+                        // padding responsivo e hit-area grande
+                        "relative min-w-max px-5 md:px-6 py-3 md:py-3.5 rounded-2xl",
+                        "transition-all duration-300 ease-out border",
+                        active
+                          ? "bg-white border-gray-200 shadow-lg"
+                          : "bg-white/80 border-gray-200/70 hover:bg-white/95"
+                      ].join(" ")}
+                      whileHover={{ y: -1, scale: 1.01 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      {/* fundo ativo com animação suave */}
+                      {active && (
+                        <motion.div
+                          className="absolute inset-0 rounded-2xl"
+                          style={{
+                            background: `linear-gradient(90deg, ${palette.primary}14, ${palette.primaryLight}10)`,
+                          }}
+                          layoutId="activeTabBackground"
+                          transition={{ type: "spring", stiffness: 320, damping: 28 }}
+                        />
+                      )}
+
+                      <div className="relative z-10 flex items-center gap-3 md:gap-3.5">
+                        <div
+                          className="p-2 md:p-2.5 rounded-xl transition-colors duration-300"
+                          style={{
+                            backgroundColor: active ? "rgba(98,138,76,0.12)" : "rgba(0,0,0,0.04)",
+                          }}
+                        >
+                          <Icon
+                            className={active ? "scale-110" : "scale-100"}
+                            style={{
+                              color: active ? palette.primary : "#6b7280",
+                              fontSize: 18,
+                              transition: "transform .3s",
+                            }}
+                            aria-hidden="true"
+                          />
+                        </div>
+
+                        <span
+                          className="text-[0.95rem] md:text-base font-semibold tracking-wide"
+                          style={{ color: active ? palette.primaryDark : "#374151" }}
+                        >
+                          {t.label}
+                        </span>
+                      </div>
+
+                      {/* indicador inferior */}
+                      {active && (
+                        <motion.div
+                          className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 h-1 rounded-t-full"
+                          style={{
+                            width: 64,
+                            background: `linear-gradient(90deg, ${palette.primary}, ${palette.primaryLight})`,
+                          }}
+                          layoutId="activeTabIndicator"
+                          transition={{ type: "spring", stiffness: 320, damping: 28 }}
+                        />
+                      )}
+                    </motion.div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Se existir footer fixo no mobile, aumente este espaçador */}
+      <div className="md:hidden h-2" aria-hidden="true" />
+
+      {/* utilitários globais */}
+      <style jsx global>{`
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
+    </>
   );
 }

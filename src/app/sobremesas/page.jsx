@@ -35,7 +35,7 @@ export default async function Page({ searchParams }) {
 
       <section className="scroll-mt-28">
         <h2 className="sr-only">Sobremesas</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {pageItems.map(i => <MenuItemCard key={i.id} item={i} />)}
         </div>
 

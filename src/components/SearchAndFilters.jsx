@@ -32,7 +32,7 @@ export default function SearchAndFilters({ tags = [] }) {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="sticky top-[calc(80px+56px)] z-30 bg-white/97 backdrop-blur-2xl border-b border-neutral-100 shadow-sm"
+      className="sticky top-[calc(80px+56px)] z-30 "
     >
       <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col gap-6">
         <div className="flex gap-5 items-center">

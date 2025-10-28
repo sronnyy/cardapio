@@ -6,10 +6,14 @@ import { motion } from "framer-motion";
 import { FaLeaf, FaUtensils, FaIceCream, FaGlassMartini } from "react-icons/fa";
 
 const tabs = [
-  { href: "/entradas",   label: "Entradas",   seg: "entradas",   icon: FaLeaf,         prefetch: true },
-  { href: "/pratos",     label: "Principal",  seg: "pratos",     icon: FaUtensils,     prefetch: true },
-  { href: "/sobremesas", label: "Sobremesas", seg: "sobremesas", icon: FaIceCream,     prefetch: true },
-  { href: "/bebidas",    label: "Bebidas",    seg: "bebidas",    icon: FaGlassMartini, prefetch: true },
+  { href: "/bebidas",           label: "Bebidas",        seg: "bebidas",           icon: FaGlassMartini, prefetch: true },
+  { href: "/entradas",          label: "Entradas",       seg: "entradas",          icon: FaLeaf,         prefetch: true },
+  { href: "/frutos-do-mar",     label: "Frutos do Mar",  seg: "frutos-do-mar",     icon: FaUtensils,     prefetch: true },
+  { href: "/moqueca",           label: "Moquecas",       seg: "moqueca",           icon: FaUtensils,     prefetch: true },
+  { href: "/risotos",           label: "Risotos",        seg: "risotos",           icon: FaUtensils,     prefetch: true },
+  { href: "/massas",            label: "Massas",         seg: "massas",            icon: FaUtensils,     prefetch: true },
+  { href: "/pratos-executivos", label: "Executivos",     seg: "pratos-executivos", icon: FaUtensils,     prefetch: true },
+  { href: "/sobremesas",        label: "Sobremesas",     seg: "sobremesas",        icon: FaIceCream,     prefetch: true },
 ];
 
 const palette = {

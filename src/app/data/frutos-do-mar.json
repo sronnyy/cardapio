@@ -1,0 +1,57 @@
+[
+  {
+    "categoria": "Mariscos e Crustáceos",
+    "itens": [
+      { "id": 1, "nome": "Marisco aberto", "preco": 89.0, "desc": "" },
+      { "id": 2, "nome": "Espetinhos (Carne, Frango, coffe ou linguiça)", "preco": 14.0, "desc": "Espetinhos variados com opções de carne, frango, coffe ou linguiça" },
+      { "id": 3, "nome": "Queijo coalho", "preco": 12.0, "desc": "" },
+      { "id": 4, "nome": "Guisão de Frango", "preco": 55.0, "desc": "" },
+      { "id": 5, "nome": "Sardinha frita", "preco": 35.0, "desc": "" },
+      { "id": 6, "nome": "Lula à dorê ou grelhada", "preco": 89.0, "desc": "" },
+      { "id": 7, "nome": "Misto de frutos do mar", "preco": 199.0, "desc": "" },
+      { "id": 8, "nome": "Polvo", "preco": 110.0, "desc": "" }
+    ]
+  },
+  {
+    "categoria": "Camarões Especiais",
+    "itens": [
+      { "id": 9, "nome": "Camarão alho e óleo", "preco": 89.0, "desc": "" },
+      { "id": 10, "nome": "Camarão no leite de coco com Lula", "preco": 115.0, "desc": "" },
+      { "id": 11, "nome": "Mix de frutos do mar com camarão e creme para 2 pessoas", "preco": 279.0, "desc": "" },
+      { "id": 12, "nome": "Mix de frutos do mar com camarão, polvo para 2 pessoas", "preco": 299.0, "desc": "" },
+      { "id": 13, "nome": "Mix de frutos do mar com camarão, polvo, lagosta", "preco": 389.0, "desc": "" },
+      { "id": 14, "nome": "Camarão VG 1a qualidade", "preco": 229.0, "desc": "" },
+      { "id": 15, "nome": "Camarão VG 2a qualidade", "preco": 199.0, "desc": "" }
+    ]
+  },
+  {
+    "categoria": "Pratos Grelhados",
+    "itens": [
+      { "id": 16, "nome": "Pitu de linguiça", "preco": 140.0, "desc": "" },
+      { "id": 17, "nome": "Robalo para 2 pessoas", "preco": 229.0, "desc": "" },
+      { "id": 18, "nome": "Anchova frita", "preco": 129.0, "desc": "" },
+      { "id": 19, "nome": "Posta de badejo para 2 pessoas", "preco": 219.0, "desc": "" },
+      { "id": 20, "nome": "Pescada amarela para 2 pessoas", "preco": 99.0, "desc": "" },
+      { "id": 21, "nome": "Pitu do Salgado individual", "preco": 99.0, "desc": "" },
+      { "id": 22, "nome": "Pitu do Salgado para 2 pessoas", "preco": 189.0, "desc": "" }
+    ]
+  },
+  {
+    "categoria": "Pratos Grelhados Especiais",
+    "itens": [
+      { "id": 23, "nome": "Cherne com camarão para 2 pessoas", "preco": 239.0, "desc": "" },
+      { "id": 24, "nome": "Lagosta completa VG e camarão para 2 pessoas", "preco": 489.0, "desc": "" },
+      { "id": 25, "nome": "Lagosta, camarão VG para 2 pessoas", "preco": 650.0, "desc": "" },
+      { "id": 26, "nome": "Paella de frutos do mar para 2 pessoas", "preco": 319.0, "desc": "" },
+      { "id": 27, "nome": "Paella de frutos do mar para 3 pessoas", "preco": 399.0, "desc": "" },
+      { "id": 28, "nome": "Paella de frutos do mar para 4 pessoas", "preco": 650.0, "desc": "" },
+      { "id": 29, "nome": "Paella de camarão para 2 pessoas", "preco": 249.0, "desc": "" },
+      { "id": 30, "nome": "Dona Florinda de lagosta com 8 camarões VG", "preco": 489.0, "desc": "" },
+      { "id": 31, "nome": "Oito Estrelas de lagosta com 12 camarões VG", "preco": 729.0, "desc": "" },
+      { "id": 32, "nome": "Peixe à delícia individual", "preco": 129.0, "desc": "" },
+      { "id": 33, "nome": "Polvo à delícia para 2 pessoas", "preco": 200.0, "desc": "" },
+      { "id": 34, "nome": "Polvo à lagosta individual", "preco": 129.0, "desc": "" },
+      { "id": 35, "nome": "Lula rechada com camarão individual", "preco": 95.0, "desc": "" }
+    ]
+  }
+]

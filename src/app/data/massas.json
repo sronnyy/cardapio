@@ -1,0 +1,14 @@
+[
+  {
+    "categoria": "Espaguetes",
+    "itens": [
+      { "id": 1, "nome": "Spaghetti de frutos do mar para 2 pessoas", "preco": 239.0, "desc": "Queijo ralado" },
+      { "id": 2, "nome": "Spaghetti de Polvo ou mar para 3 pessoas", "preco": 399.0, "desc": "Queijo ralado" },
+      { "id": 3, "nome": "Spaghetti de camarão individual", "preco": 119.0, "desc": "Queijo ralado" },
+      { "id": 4, "nome": "Spaghetti de camarão para 2 pessoas", "preco": 239.0, "desc": "Queijo ralado" },
+      { "id": 5, "nome": "Spaghetti de camarão para 4 pessoas", "preco": 399.0, "desc": "Queijo ralado" },
+      { "id": 6, "nome": "Nhoque com polvo ou camarão", "preco": 89.0, "desc": "Queijo ralado" },
+      { "id": 7, "nome": "Nhoque com frutos do mar individual", "preco": 119.0, "desc": "Queijo ralado" }
+    ]
+  }
+]

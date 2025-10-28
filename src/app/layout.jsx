@@ -92,23 +92,43 @@ export default function RootLayout({ children }) {
 
         {/* FOOTER FIXO */}
         <footer className="fixed inset-x-0 bottom-0 z-50 bg-white/95 backdrop-blur-xl border-t border-neutral-200/70">
-          <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
-            <div className="flex flex-col">
-              <p className="text-sm text-neutral-700 leading-none font-medium">
-                © {new Date().getFullYear()} Restaurante Videira
-              </p>
-              <p className="text-xs text-neutral-500 mt-1.5">
-                Todos os direitos reservados
-              </p>
+          <div className="mx-auto max-w-7xl px-6 py-4">
+            {/* Primeira linha - Informações principais */}
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex flex-col">
+                <p className="text-sm text-neutral-700 leading-none font-medium">
+                  © {new Date().getFullYear()} Restaurante Videira
+                </p>
+                <p className="text-xs text-neutral-500 mt-1.5">
+                  Todos os direitos reservados
+                </p>
+              </div>
+
+              <div className="flex flex-col items-end">
+                <p className="text-sm text-neutral-700 leading-none font-medium">
+                  Atendimento: <span className="text-[#628a4c]">12h–23h</span>
+                </p>
+                <p className="text-xs text-neutral-500 mt-1.5">
+                  Reservas: <span className="text-[#628a4c]">(11) 9999-9999</span>
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-col items-end">
-              <p className="text-sm text-neutral-700 leading-none font-medium">
-                Atendimento: <span className="text-[#628a4c]">18h–23h</span>
-              </p>
-              <p className="text-xs text-neutral-500 mt-1.5">
-                Reservas: <span className="text-[#628a4c]">(11) 9999-9999</span>
-              </p>
+            {/* Segunda linha - Localização */}
+            <div className="flex items-center justify-center pt-2 border-t border-neutral-200/50">
+              <div className="flex items-center gap-2 text-xs text-neutral-600">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 20 20" 
+                  fill="currentColor" 
+                  className="w-4 h-4 text-[#628a4c]"
+                >
+                  <path fillRule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.646 7.584.829.799 1.654 1.381 2.274 1.765a11.25 11.25 0 00.757.433 5.708 5.708 0 00.281.14l.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">
+                  Rua Dona Antonia de Vilhena, 77 - Centro, Angra dos Reis, Rio de Janeiro, Brazil 23900-580
+                </span>
+              </div>
             </div>
           </div>
         </footer>

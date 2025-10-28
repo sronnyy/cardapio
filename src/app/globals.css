@@ -47,6 +47,35 @@ body {
     position: absolute; bottom: -2px; left: 0; width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, rgba(0,0,0,.1), transparent);
   }
+  
+  /* Line clamp utilities para truncar texto */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  
+  .line-clamp-none {
+    overflow: visible;
+    display: block;
+    -webkit-box-orient: horizontal;
+    -webkit-line-clamp: none;
+  }
 }
 
 /* Scrollbarzinha educada */

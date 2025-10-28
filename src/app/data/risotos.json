@@ -1,0 +1,21 @@
+[
+  {
+    "categoria": "Risotos Especiais",
+    "itens": [
+      { "id": 1, "nome": "Lula rechada com camarão para 2 pessoas", "preco": 189.0, "desc": "" },
+      { "id": 2, "nome": "Risoto de camarão individual", "preco": 99.0, "desc": "" },
+      { "id": 3, "nome": "Risoto de camarão para 2 pessoas", "preco": 199.0, "desc": "" },
+      { "id": 4, "nome": "Risoto de camarão para 4 pessoas", "preco": 390.0, "desc": "" },
+      { "id": 5, "nome": "Risoto de camarão simples com polvo individual", "preco": 139.0, "desc": "" },
+      { "id": 6, "nome": "Risoto de arroz de brócolis com polvo para 2 pessoas", "preco": 199.0, "desc": "" },
+      { "id": 7, "nome": "Risoto de arroz de brócolis individual", "preco": 275.0, "desc": "" }
+    ]
+  },
+  {
+    "categoria": "Risotos de Bacalhau",
+    "itens": [
+      { "id": 8, "nome": "Bacalhau à moda individual", "preco": 139.0, "desc": "" },
+      { "id": 9, "nome": "Bacalhau à moda para 2 pessoas", "preco": 219.0, "desc": "" }
+    ]
+  }
+]

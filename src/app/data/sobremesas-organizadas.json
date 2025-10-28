@@ -1,0 +1,10 @@
+[
+  {
+    "categoria": "Pudins e Doces Cremosos",
+    "itens": [
+      { "id": 1, "nome": "Pudim de leite condensado", "preco": 20.0, "desc": "" },
+      { "id": 2, "nome": "Brownie chocolate", "preco": 20.0, "desc": "" },
+      { "id": 3, "nome": "Petit Gateau", "preco": 20.0, "desc": "" }
+    ]
+  }
+]

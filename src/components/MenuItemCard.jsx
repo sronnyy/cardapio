@@ -13,7 +13,7 @@ export default function MenuItemCard({ item, index = 0 }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -4, transition: { duration: 0.3 } }}
-      className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100"
+      className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100 h-fit"
     >
       {/* Efeito de brilho verde na borda */}
       <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-[#628a4c]/0 via-[#628a4c]/5 to-[#628a4c]/0 opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
@@ -87,9 +87,16 @@ export default function MenuItemCard({ item, index = 0 }) {
         {/* Conteúdo do card */}
         <div className="p-4 md:p-5">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3 gap-2">
-            <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1">
-              {item.nome}
-            </h3>
+            <div className="flex-1 min-w-0">
+              <h3 
+                className="text-lg font-bold text-gray-900 leading-tight group/title cursor-help"
+                title={item.nome}
+              >
+                <span className="line-clamp-2 group-hover/title:line-clamp-none transition-all duration-300">
+                  {item.nome}
+                </span>
+              </h3>
+            </div>
             
             <div className="flex flex-col items-start md:items-end shrink-0">
               <span className="text-xl font-bold bg-gradient-to-r from-[#628a4c] to-[#4a6a3a] bg-clip-text text-transparent">
@@ -108,7 +115,7 @@ export default function MenuItemCard({ item, index = 0 }) {
 
           {/* Descrição */}
           {item.desc && (
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
               {item.desc}
             </p>
           )}

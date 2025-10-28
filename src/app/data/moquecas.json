@@ -1,0 +1,32 @@
+[
+  {
+    "categoria": "Moquecas de Bacalhau",
+    "itens": [
+      { "id": 1, "nome": "Moqueca de bacalhau preparado no espeto e vinho branco individual", "preco": 139.0, "desc": "Arroz branco e farofa de dendê" },
+      { "id": 2, "nome": "Moqueca de bacalhau preparado no espeto e vinho branco para 2", "preco": 249.0, "desc": "Arroz branco e farofa de dendê" }
+    ]
+  },
+  {
+    "categoria": "Moquecas de Lagosta",
+    "itens": [
+      { "id": 3, "nome": "Moqueca de lagosta para 2 pessoas", "preco": 429.0, "desc": "Arroz branco e farofa de dendê" }
+    ]
+  },
+  {
+    "categoria": "Moquecas de Polvo",
+    "itens": [
+      { "id": 4, "nome": "Moqueca de Polvo do mar individual", "preco": 129.0, "desc": "Arroz branco e farofa de dendê" },
+      { "id": 5, "nome": "Moqueca de polvo para 2 pessoas", "preco": 219.0, "desc": "Arroz branco e farofa de dendê" },
+      { "id": 6, "nome": "Moqueca de Polvo do mar para 4 pessoas", "preco": 469.0, "desc": "Arroz branco e farofa de dendê" }
+    ]
+  },
+  {
+    "categoria": "Moquecas de Camarão",
+    "itens": [
+      { "id": 7, "nome": "Moqueca de camarão com camarão para 2 pessoas", "preco": 239.0, "desc": "Arroz branco e farofa de dendê" },
+      { "id": 8, "nome": "Moqueca de camarão individual", "preco": 139.0, "desc": "Arroz branco e farofa de dendê" },
+      { "id": 9, "nome": "Moqueca de camarão para 2 pessoas", "preco": 259.0, "desc": "Arroz branco e farofa de dendê" },
+      { "id": 10, "nome": "Moqueca de camarão para 4 pessoas", "preco": 469.0, "desc": "Arroz branco e farofa de dendê" }
+    ]
+  }
+]

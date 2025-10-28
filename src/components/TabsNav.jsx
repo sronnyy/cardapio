@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { motion } from "framer-motion";
-import { FaLeaf, FaUtensils, FaIceCream, FaGlassMartini } from "react-icons/fa";
+import { FaLeaf, FaUtensils, FaIceCream, FaGlassMartini, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useRef } from "react";
 
 const tabs = [
   { href: "/bebidas",           label: "Bebidas",        seg: "bebidas",           icon: FaGlassMartini, prefetch: true },
@@ -25,6 +26,19 @@ const palette = {
 export default function TabsNav() {
   const seg = useSelectedLayoutSegment();
   const isActive = (s) => seg === s || (seg === null && s === "entradas");
+  const scrollContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -36,13 +50,19 @@ export default function TabsNav() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* faixa rolável no mobile; centraliza no desktop */}
-          <div className="relative">
-            {/* fades laterais para sugerir rolagem */}
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-6 bg-gradient-to-r from-white to-transparent" />
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-white to-transparent" />
+          <div className="relative flex items-center">
+            {/* Botão esquerdo - visível em todas as telas */}
+            <button
+              onClick={scrollLeft}
+              className="flex-shrink-0 mr-3 bg-white border border-gray-300 rounded-xl p-2.5 shadow-sm hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 active:scale-95"
+              aria-label="Rolar para esquerda"
+            >
+              <FaChevronLeft className="w-4 h-4 text-gray-700" />
+            </button>
 
             <div
-              className="flex gap-3 md:gap-4 py-3 md:py-4 pl-1 pr-1 md:px-0 overflow-x-auto no-scrollbar snap-x snap-mandatory md:justify-center"
+              ref={scrollContainerRef}
+              className="flex gap-3 md:gap-4 py-3 md:py-4 px-2 md:px-0 overflow-x-auto no-scrollbar snap-x snap-mandatory md:justify-center flex-1"
               style={{
                 WebkitOverflowScrolling: "touch",
                 scrollPaddingInline: "1rem",
@@ -129,6 +149,15 @@ export default function TabsNav() {
                 );
               })}
             </div>
+
+            {/* Botão direito - visível em todas as telas */}
+            <button
+              onClick={scrollRight}
+              className="flex-shrink-0 ml-3 bg-white border border-gray-300 rounded-xl p-2.5 shadow-sm hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 active:scale-95"
+              aria-label="Rolar para direita"
+            >
+              <FaChevronRight className="w-4 h-4 text-gray-700" />
+            </button>
           </div>
         </div>
       </nav>
